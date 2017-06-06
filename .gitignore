@@ -2,3 +2,4 @@ pkg/
 .vagrant
 .ruby-version
 Gemfile.lock
+.idea/

@@ -21,7 +21,7 @@ class solr::config(
   $dist_root      = $solr::params::dist_root,
   ) inherits solr::params {
 
-  $dl_name        = "solr-${version}.tgz"
+  $dl_name        = "apache-solr-${version}.tgz"
   $download_url   = "${mirror}/${version}/${dl_name}"
 
   #Copy the jetty config file
