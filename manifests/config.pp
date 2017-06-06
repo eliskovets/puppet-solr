@@ -61,7 +61,7 @@ class solr::config(
   exec { 'copy-solr':
     path    => [ '/bin', '/sbin' , '/usr/bin', '/usr/sbin', '/usr/local/bin' ],
     command =>  "jar xvf ${dist_root}/apache-solr-${version}/dist/apache-solr-${version}.war; \
-    cp ${dist_root}/apache-solr-${version}/example/lib/ext/*.jar WEB-INF/lib",
+    cp ${dist_root}/apache-solr-${version}/example/lib/*.jar WEB-INF/lib",
     cwd     =>  $solr_home,
     onlyif  =>  "test ! -d ${solr_home}/WEB-INF",
     require =>  Exec['extract-solr'],
